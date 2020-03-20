@@ -1,0 +1,91 @@
+%die-shared {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.2s;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+    }
+
+    &:hover svg {
+        transform: scale(1.1);
+    }
+
+    &:active svg {
+        transform: scale(0.9);
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 0.3rem;
+        text-align: center;
+        color: #fff;
+        user-select: none;
+    }
+}
+
+.anim {
+    transition: all 1s;
+    transform: rotate(360deg);
+}
+
+.die {
+    &-d4 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d4-color;
+        }
+    }
+    &-d6 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d6-color;
+        }
+    }
+    &-d8 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d8-color;
+        }
+    }
+    &-d10 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d10-color;
+        }
+    }
+    &-d12 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d12-color;
+        }
+    }
+    &-d20 {
+        @extend %die-shared;
+
+        svg {
+            fill: $d20-color;
+        }
+    }
+}
+
+.btn-control {
+    @extend %die-shared;
+
+    svg {
+        fill: $button-control-color;
+    }
+}

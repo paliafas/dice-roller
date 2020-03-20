@@ -1,0 +1,36 @@
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1rem;
+}
+
+#roll-area {
+    height: $roll-area-section-height;
+    background: $roll-area-background-color;
+
+    .container {
+        height: 100%;
+
+        .roll-area-content {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20%, 0.25fr));
+            justify-content: center;
+        }
+    }
+}
+
+#controls {
+    height: $controls-section-height;
+    background: $controls-background-color;
+
+    .container {
+        height: 100%;
+
+        .controls-content {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+}
