@@ -4,9 +4,22 @@
     padding: 0 1rem;
 }
 
+#roll-total {
+    height: 10vh;
+    background: $roll-total-background-color;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 #roll-area {
-    height: $roll-area-section-height;
+    height: 75vh;
     background: $roll-area-background-color;
+    padding: 2rem 0;
 
     .container {
         height: 100%;
@@ -21,7 +34,7 @@
 }
 
 #controls {
-    height: $controls-section-height;
+    height: 10vh;
     background: $controls-background-color;
 
     .container {
@@ -32,5 +45,84 @@
             display: grid;
             grid-template-columns: repeat(8, 1fr);
         }
+    }
+}
+
+#main-footer {
+    height: 5vh;
+    background: $main-footer-background-color;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #roll-area {
+        height: 65vh;
+    }
+
+    #controls {
+        height: 20vh;
+
+        .container {
+            .controls-content {
+                padding: 0.25rem 0;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    'd4 d6 d8 clear-button'
+                    'd10 d12 d20 roll-button';
+
+                .die-d4 {
+                    grid-area: d4;
+                }
+                .die-d6 {
+                    grid-area: d6;
+                }
+                .die-d8 {
+                    grid-area: d8;
+                }
+                .die-10 {
+                    grid-area: d10;
+                }
+                .die-d12 {
+                    grid-area: d12;
+                }
+                .die-d20 {
+                    grid-area: d20;
+                }
+                .clear-button {
+                    grid-area: clear-button;
+                }
+                .roll-button {
+                    grid-area: roll-button;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 500px) {
+    #roll-total {
+        height: auto;
+    }
+
+    #roll-area {
+        height: 80vh;
+    }
+
+    #controls {
+        height: 40vh;
+    }
+
+    #main-footer {
+        height: auto;
     }
 }

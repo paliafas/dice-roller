@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import RollTotal from './RollTotal';
 import RollArea from './RollArea';
 import Controls from './Controls';
+import Footer from './Footer';
 
 class App extends Component {
     state = {
@@ -11,17 +13,26 @@ class App extends Component {
     render() {
         return (
             <div>
+                <RollTotal
+                    value={this.state.dice.reduce(
+                        (sum, die) => die.roll + sum,
+                        0
+                    )}
+                />
                 <RollArea dice={this.state.dice} removeDie={this.removeDie} />
                 <Controls
                     addDie={this.addDie}
                     rollDice={this.rollDice}
                     clearDice={this.clearDice}
                 />
+                <Footer />
             </div>
         );
     }
 
     addDie = dieSides => {
+        if (this.state.dice.length >= 50) return;
+
         const newDie = {
             sides: dieSides,
             roll: this.state.hasRolled
@@ -35,7 +46,8 @@ class App extends Component {
     };
 
     removeDie = id => {
-        const hasRolled = this.state.dice.length === 1 ? false : true;
+        const hasRolled =
+            this.state.dice.length === 1 ? false : this.state.hasRolled;
 
         this.setState({
             dice: [...this.state.dice.filter((die, index) => index !== id)],

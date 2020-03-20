@@ -1,10 +1,9 @@
 import React from 'react';
-import { ReactComponent as DieControl } from '../img/button.svg';
+import { ReactComponent as RollButtonSVG } from '../img/roll-button.svg';
 
 const RollButton = ({ rollDice }) => (
-    <div className="btn-control" onClick={rollDice}>
-        <DieControl />
-        <span>Roll</span>
+    <div className="btn-control roll-button" onClick={rollDice}>
+        <RollButtonSVG />
     </div>
 );
 

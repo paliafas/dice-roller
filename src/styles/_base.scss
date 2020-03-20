@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
 
-$roll-area-section-height: 90vh;
-$controls-section-height: 10vh;
+$roll-total-background-color: #111;
 $roll-area-background-color: #111;
 $controls-background-color: #222;
+$main-footer-background-color: #4a437d;
 $d4-color: #084c61;
 $d6-color: #db504a;
-$d8-color: #e3b505;
+$d8-color: #cf9038;
 $d10-color: #4f6d7a;
 $d12-color: #56a3a6;
 $d20-color: #967aa1;
@@ -17,4 +17,9 @@ $button-control-color: #333;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Baloo Chettan 2', cursive;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
 }
