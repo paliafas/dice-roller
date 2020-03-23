@@ -12,7 +12,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div id="dice-roller">
                 <RollTotal
                     value={this.state.dice.reduce(
                         (sum, die) => die.roll + sum,

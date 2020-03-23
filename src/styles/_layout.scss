@@ -4,8 +4,13 @@
     padding: 0 1rem;
 }
 
+#dice-roller {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
 #roll-total {
-    height: 10vh;
+    height: 10%;
     background: $roll-total-background-color;
 
     .container {
@@ -17,7 +22,7 @@
 }
 
 #roll-area {
-    height: 75vh;
+    height: 75%;
     background: $roll-area-background-color;
     padding: 2rem 0;
 
@@ -34,7 +39,7 @@
 }
 
 #controls {
-    height: 10vh;
+    height: 10%;
     background: $controls-background-color;
 
     .container {
@@ -49,7 +54,7 @@
 }
 
 #main-footer {
-    height: 5vh;
+    height: 5%;
     background: $main-footer-background-color;
 
     .container {
@@ -66,11 +71,11 @@
 
 @media (max-width: 767px) {
     #roll-area {
-        height: 65vh;
+        height: 65%;
     }
 
     #controls {
-        height: 20vh;
+        height: 20%;
 
         .container {
             .controls-content {
@@ -115,11 +120,11 @@
     }
 
     #roll-area {
-        height: 80vh;
+        height: 80%;
     }
 
     #controls {
-        height: 40vh;
+        height: 40%;
     }
 
     #main-footer {
