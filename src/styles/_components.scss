@@ -4,6 +4,7 @@
     display: inline-block;
     overflow: hidden;
     transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
 
     svg {
         display: block;
