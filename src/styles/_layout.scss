@@ -9,23 +9,6 @@
     height: calc(var(--vh, 1vh) * 100);
 }
 
-#roll-area {
-    height: 75%;
-    background: $roll-area-background-color;
-    padding: 2rem 0;
-
-    .container {
-        height: 100%;
-
-        .roll-area-content {
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20%, 0.25fr));
-            justify-content: center;
-        }
-    }
-}
-
 #controls {
     height: 10%;
     background: $controls-background-color;
@@ -58,10 +41,6 @@
 }
 
 @media (max-width: 767px) {
-    #roll-area {
-        height: 65%;
-    }
-
     #controls {
         height: 20%;
 

@@ -7,9 +7,11 @@ const RollArea = ({ dice, removeDie }) => {
     ));
 
     return (
-        <section id="roll-area">
-            <div className="container">
-                <div className="roll-area-content">{diceElements}</div>
+        <section className="bg-roll-area h-[65%] md:h-[75%] tall:bg-red px-0 py-8">
+            <div className="h-[100%]">
+                <div className="h-[100%] grid grid-cols-[repeat(auto-fit,_minmax(20%,_0.25fr))] justify-center">
+                    {diceElements}
+                </div>
             </div>
         </section>
     );
