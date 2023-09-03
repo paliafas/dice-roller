@@ -3,11 +3,12 @@ import RollTotal from './RollTotal';
 import RollArea from './RollArea';
 import Controls from './Controls';
 import Footer from './Footer';
+import '../../src/index.css';
 
 class App extends Component {
     state = {
         dice: [],
-        hasRolled: false
+        hasRolled: false,
     };
 
     render() {
@@ -30,35 +31,35 @@ class App extends Component {
         );
     }
 
-    addDie = dieSides => {
+    addDie = (dieSides) => {
         if (this.state.dice.length >= 50) return;
 
         const newDie = {
             sides: dieSides,
             roll: this.state.hasRolled
                 ? Math.floor(Math.random() * dieSides + 1)
-                : ' '
+                : ' ',
         };
 
         this.setState({
-            dice: [...this.state.dice, newDie]
+            dice: [...this.state.dice, newDie],
         });
     };
 
-    removeDie = id => {
+    removeDie = (id) => {
         const hasRolled =
             this.state.dice.length === 1 ? false : this.state.hasRolled;
 
         this.setState({
             dice: [...this.state.dice.filter((die, index) => index !== id)],
-            hasRolled: hasRolled
+            hasRolled: hasRolled,
         });
     };
 
     rollDice = () => {
         if (this.state.dice.length === 0) return;
 
-        const rolledDice = this.state.dice.map(die => {
+        const rolledDice = this.state.dice.map((die) => {
             die.roll = Math.floor(Math.random() * die.sides + 1);
 
             return die;
@@ -66,14 +67,14 @@ class App extends Component {
 
         this.setState({
             dice: rolledDice,
-            hasRolled: true
+            hasRolled: true,
         });
     };
 
     clearDice = () => {
         this.setState({
             dice: [],
-            hasRolled: false
+            hasRolled: false,
         });
     };
 }
