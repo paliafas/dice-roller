@@ -9,18 +9,6 @@
     height: calc(var(--vh, 1vh) * 100);
 }
 
-#roll-total {
-    height: 10%;
-    background: $roll-total-background-color;
-
-    .container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 #roll-area {
     height: 75%;
     background: $roll-area-background-color;
