@@ -24,22 +24,6 @@
     }
 }
 
-#main-footer {
-    height: 5%;
-    background: $main-footer-background-color;
-
-    .container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        p {
-            margin-right: 1.5rem;
-        }
-    }
-}
-
 @media (max-width: 767px) {
     #controls {
         height: 20%;

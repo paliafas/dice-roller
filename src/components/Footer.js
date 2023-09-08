@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer id="main-footer">
-            <div className="container">
+        <footer className="h-[5%] bg-main-footer">
+            <div className="h-full flex justify-center items-center">
                 <p>
                     <a
                         href="https://www.linkedin.com/in/pantelis-liafas-6438a8169/"
