@@ -9,62 +9,6 @@
     height: calc(var(--vh, 1vh) * 100);
 }
 
-#controls {
-    height: 10%;
-    background: $controls-background-color;
-
-    .container {
-        height: 100%;
-
-        .controls-content {
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    #controls {
-        height: 20%;
-
-        .container {
-            .controls-content {
-                padding: 0.25rem 0;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-areas:
-                    'd4 d6 d8 clear-button'
-                    'd10 d12 d20 roll-button';
-
-                .die-d4 {
-                    grid-area: d4;
-                }
-                .die-d6 {
-                    grid-area: d6;
-                }
-                .die-d8 {
-                    grid-area: d8;
-                }
-                .die-10 {
-                    grid-area: d10;
-                }
-                .die-d12 {
-                    grid-area: d12;
-                }
-                .die-d20 {
-                    grid-area: d20;
-                }
-                .clear-button {
-                    grid-area: clear-button;
-                }
-                .roll-button {
-                    grid-area: roll-button;
-                }
-            }
-        }
-    }
-}
-
 @media (max-height: 500px) {
     #roll-total {
         height: auto;
