@@ -1,8 +1,3 @@
-#dice-roller {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-}
-
 @media (max-height: 500px) {
     #roll-total {
         height: auto;
