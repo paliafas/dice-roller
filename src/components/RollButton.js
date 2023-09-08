@@ -1,9 +1,12 @@
 import React from 'react';
-import { ReactComponent as RollButtonSVG } from '../img/roll-button.svg';
+import ButtonSVG from './ButtonSVG';
 
 const RollButton = ({ rollDice }) => (
-    <div className="btn-control roll-button" onClick={rollDice}>
-        <RollButtonSVG />
+    <div
+        className="relative cursor-pointer inline-block overflow-hidden"
+        onClick={rollDice}
+    >
+        <ButtonSVG value="Roll" />
     </div>
 );
 

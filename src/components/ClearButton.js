@@ -1,9 +1,12 @@
 import React from 'react';
-import { ReactComponent as ClearButtonSVG } from '../img/clear-button.svg';
+import ButtonSVG from './ButtonSVG';
 
 const ClearButton = ({ clearDice }) => (
-    <div className="btn-control clear-button" onClick={clearDice}>
-        <ClearButtonSVG />
+    <div
+        className="relative cursor-pointer inline-block overflow-hidden"
+        onClick={clearDice}
+    >
+        <ButtonSVG value="Clear" />
     </div>
 );
 
